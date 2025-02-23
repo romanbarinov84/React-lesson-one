@@ -1,9 +1,12 @@
 import Header from "./components/Header";
 import { ways } from "./data";
 import ChangeText from "./components/ChangeText";
-
+import Button from "./components/buttons/Button";
 
 function App() {
+  function buttonClick(){
+
+  }
   return (
     <div>
       <Header />
@@ -37,8 +40,11 @@ function App() {
         </section>
         <section>
           <h3>
-            
+          В JSX всё работает так же, как и в обычном HTML.
           </h3>
+        <Button onClick={() => buttonClick("way")}>Click</Button>
+        <Button onClick={() => buttonClick("easy")}>Push</Button>
+        <Button onClick={() => buttonClick("program")}>Remove</Button>
         </section>
       </main>
     </div>
