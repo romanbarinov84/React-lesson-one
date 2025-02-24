@@ -1,10 +1,17 @@
-
+import { useState , useEffect } from 'react';
 import logo from '/vite.svg'
 
 // создаем функцию которая возвращает header
 export default function Header(){
-    //Получаем время
-    const now = new Date();
+   //Получаем время
+  const [now , setNow] = useState(new Date())
+   //Щчищаем от лишних интервалов
+    useEffect(() => {
+     const interval = setInterval(() => setNow(new Date()), 30000);
+     return () => clearInterval(interval)
+    }, []);
+    
+     
     const hours = now.getHours();
     const minutes = now.getMinutes()
     const getFullTime = `${hours}:${minutes < 10 ? '0' + minutes : minutes}`;

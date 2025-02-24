@@ -1,5 +1,5 @@
 
-.button{
+button{
     padding: 0.8rem 2rem;
     border: none;
     border-radius: 6px;
@@ -7,14 +7,16 @@
     transition: all 0.3s;
     font-weight: bold;
     margin-right: 1rem;
-    background-color: #45a049;
+    background-color: #0cd248;
+    box-shadow: 1px 1px 2px 2px;
 }
 
 button:hover{
     opacity: 0.8;
 }
 
-.button.active{
-    background: #3e6ae1;
+button:active{
+    background: #0996ac;
     color: #fff;
 }
+
