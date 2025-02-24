@@ -23,26 +23,10 @@ function App() {
 
           <p>JavaScript-библиотека для создания пользовательских интерфейсов</p>
           <ul>
-            {/*<ChangeText{...ways[0]}/>----- это короткая запись того что ниже*/}
-            <ChangeText
-              title={ways[0].title}
-              description={ways[0].description}
-            />
-            {/*<ChangeText{...ways[1]}/>----- это короткая запись того что ниже*/}
-            <ChangeText
-              title={ways[1].title}
-              description={ways[1].description}
-            />
-            {/*<ChangeText{...ways[2]}/>----- это короткая запись того что ниже*/}
-            <ChangeText
-              title={ways[2].title}
-              description={ways[2].description}
-            />
-            {/*<ChangeText{...ways[3]}/>----- это короткая запись того что ниже*/}
-            <ChangeText
-              title={ways[3].title}
-              description={ways[3].description}
-            />
+            
+            {ways.map(way => <ChangeText key = {way.title} {...way} />)}
+            
+        
           </ul>
         </section>
         <section>
