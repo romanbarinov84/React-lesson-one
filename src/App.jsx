@@ -2,10 +2,17 @@ import Header from "./components/Header";
 import { ways } from "./data";
 import ChangeText from "./components/ChangeText";
 import Button from "./components/buttons/Button";
+import { useState } from "react";// Хук для управления состоянием компонента
+import { differences } from "./data";
+
 
 function App() {
-  function buttonClick(){
+  const [content, setContent] = useState("Push the Button");
+  
 
+
+  function buttonClick(type){
+  setContent(type)
   }
   return (
     <div>
@@ -45,6 +52,8 @@ function App() {
         <Button onClick={() => buttonClick("way")}>Click</Button>
         <Button onClick={() => buttonClick("easy")}>Push</Button>
         <Button onClick={() => buttonClick("program")}>Remove</Button>
+
+        <p><strong>{differences[content]}</strong></p>
         </section>
       </main>
     </div>
