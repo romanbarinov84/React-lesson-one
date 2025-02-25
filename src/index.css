@@ -41,3 +41,13 @@ section ul li {
 p {
   padding: 1rem 0;
 }
+
+.control{
+  border: 2px solid cornflowerblue;
+  border-radius: 6px;
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 2rem;
+  outline: none;
+  box-shadow: 1px 2px 2px 2px  rgba(20, 20, 50, .3);
+}

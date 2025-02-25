@@ -21,3 +21,7 @@ button:active{
     color: #fff;
 }
 
+.Btn:disabled{
+ cursor: not-allowed;
+ background-color: #0996ac;
+}
