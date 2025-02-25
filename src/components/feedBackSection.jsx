@@ -1,6 +1,20 @@
 import { useState } from "react"
 import Button from "./buttons/Button.jsx"
 
+
+function StateVsRef(){
+    const [value, setValue ] = useState("")
+    return(
+        <div>
+            <h3>Input value : {value}</h3>
+            <input type="text" 
+            value={value} 
+            onChange={(e) => setValue(e.target.value)}
+             className="control" />
+        </div>
+    )
+}
+
 export default function FeedBackSection(){
     const [name, setName] = useState("")
     const [hasError, setHasError] = useState(false)
@@ -39,7 +53,12 @@ export default function FeedBackSection(){
                 </pre>
 
                 <Button disabled={hasError}>Send</Button>
+
+            
             </form>
+            < hr/>
+
+             <StateVsRef/>
         </section>
     )
 }

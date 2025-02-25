@@ -5,9 +5,10 @@ import IntroSection from "./components/introSection";
 import TabsSection from "./components/tabsSection";
 import FeedBackSection from "./components/feedBackSection";
 import { useState } from "react";
+import EffectSection from "./components/EffectSection.jsx";
 
 function App() {
-  const [tab, setTab] = useState("feedback");
+  const [tab, setTab] = useState("effect");
 
   return (
     <div>
@@ -24,6 +25,8 @@ function App() {
           </>
         )}
         {tab === "feedback" && <FeedBackSection />}
+
+        {tab === "effect" && <EffectSection/>}
       </main>
     </div>
   );
